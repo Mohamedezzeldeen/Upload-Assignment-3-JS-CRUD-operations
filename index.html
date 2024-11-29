@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/bookmark(1).png">
+    <title>Bookmark</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/Index_style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="py-5 mainTitle">
+        <h1 class="mx-auto mb-3 mt-2">Bookmarker</h1>
+      </div>
+      <div class="py-4 secondTitle ">
+        <h4 class="text-center mx-auto">
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h4>
+
+        <label for="bookN" class="form-label fw-bolder mt-4"> <i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+        <input type="text" class="form-control mb-2" id="bookN" placeholder="Bookmark Name" oninput="valide()"/>
+        <p class="bg-danger mb-4 d-none" id="message">Invalid name format. Name must be at least 3 characters long.</p>
+
+        <label for="siteU" class="form-label fw-bolder"> <i class="fa-solid fa-link"></i> Site URL</label>
+        <input type="text" class="form-control mb-2" id="siteU" placeholder="Website URL" oninput="validation()"/>
+        <p class="bg-danger mb-4 d-none" id="messageNumTwo">Invalid URL format. Please enter a valid URL!</p>
+
+        <div class="text-center">
+            <button class="btn btn-danger px-5 py-1 mt-3 fs-6" id="sub">Submit</button>
+        </div>
+      </div>
+      <div class="bg-white mt-3 mb-5 foot">
+        <table class="table table-white text-center align-text-bottom">
+            <thead>
+                <tr>
+                  <th scope="col">Index</th>
+                  <th scope="col">Website Name</th>
+                  <th scope="col">Visit</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody id="tableBodyId">
+                
+              </tbody>
+          </table>
+       
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/Index_js.js"></script>
+  </body>
+</html>
